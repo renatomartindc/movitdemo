@@ -6,8 +6,8 @@ Project web 3.0 that impulse the mobility through by play and move to earn, usin
 1. User can create an NFT based on one pet digital.
 2. User can transfer your NFT.
 3. User can buy an NFT redeeming your NEAR token.
-4. User can buy accesories to pet digital redeeming yor NEAR token.
-5. User can evolve your pet digital redeeming.
+4. User can buy accesories to pet digital redeeming your NEAR token.
+5. User can evolve your pet digital redeeming your NEAR token.
 6. User can reedem points, obtained by wereable use, by NEAR token.
 
 In the present project development only the first two.
