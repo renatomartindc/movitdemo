@@ -1,0 +1,12 @@
+/home/azureuser/near/movitdemo/target/debug/deps/borsh-f23fc8c195dd24c0.rmeta: /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/lib.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/de/mod.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/de/hint.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/schema.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/schema_helpers.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/ser/mod.rs
+
+/home/azureuser/near/movitdemo/target/debug/deps/libborsh-f23fc8c195dd24c0.rlib: /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/lib.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/de/mod.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/de/hint.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/schema.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/schema_helpers.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/ser/mod.rs
+
+/home/azureuser/near/movitdemo/target/debug/deps/borsh-f23fc8c195dd24c0.d: /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/lib.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/de/mod.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/de/hint.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/schema.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/schema_helpers.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/ser/mod.rs
+
+/home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/lib.rs:
+/home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/de/mod.rs:
+/home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/de/hint.rs:
+/home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/schema.rs:
+/home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/schema_helpers.rs:
+/home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.7.2/src/ser/mod.rs:

@@ -1,0 +1,10 @@
+/home/azureuser/near/movitdemo/target/debug/deps/borsh_schema_derive_internal-acdcd9b4cd8d5a55.rmeta: /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/lib.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/helpers.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/enum_schema.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/struct_schema.rs
+
+/home/azureuser/near/movitdemo/target/debug/deps/libborsh_schema_derive_internal-acdcd9b4cd8d5a55.rlib: /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/lib.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/helpers.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/enum_schema.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/struct_schema.rs
+
+/home/azureuser/near/movitdemo/target/debug/deps/borsh_schema_derive_internal-acdcd9b4cd8d5a55.d: /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/lib.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/helpers.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/enum_schema.rs /home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/struct_schema.rs
+
+/home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/lib.rs:
+/home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/helpers.rs:
+/home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/enum_schema.rs:
+/home/azureuser/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-schema-derive-internal-0.7.2/src/struct_schema.rs:

@@ -2,7 +2,7 @@
 name = "movit"
 version = "0.1.0"
 authors = ["Near Movit <movit@github.org>"]
-edition = "2022"
+edition = "2018"
 
 [lib]
 crate-type = ["cdylib", "rlib"]

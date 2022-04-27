@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/azureuser/near/movitdemo/target/wasm32-unknown-unknown/release/build/typenum-f38f75cefa26ac0f/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/azureuser/near/movitdemo/target/wasm32-unknown-unknown/release/build/typenum-f38f75cefa26ac0f/out/op.rs
