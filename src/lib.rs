@@ -45,13 +45,25 @@ pub type TokenId = u64;
 pub type AccountIdHash = Vec<u8>;
 
 // Begin implementation
+use near_sdk::serde::Serialize;
+#[derive(Serialize, BorshDeserialize, BorshSerialize)]
+pub struct Pet {
+    pub title: String,
+	pub description: String,
+	pub media : String,
+	pub media_hash: String
+}
+
 #[near_bindgen]
 #[derive(BorshDeserialize, BorshSerialize, PanicOnDefault)]
 pub struct NonFungibleTokenBasic {
     pub token_to_account: UnorderedMap<TokenId, AccountId>,
     pub account_gives_access: UnorderedMap<AccountIdHash, UnorderedSet<AccountIdHash>>, // Vec<u8> is sha256 of account, makes it safer and is how fungible token also works
     pub owner_id: AccountId,
+	pub token_to_pet: UnorderedMap<TokenId, Pet>,
 }
+
+
 
 #[near_bindgen]
 impl NonFungibleTokenBasic {
@@ -63,6 +75,7 @@ impl NonFungibleTokenBasic {
             token_to_account: UnorderedMap::new(b"token-belongs-to".to_vec()),
             account_gives_access: UnorderedMap::new(b"gives-access".to_vec()),
             owner_id,
+			token_to_pet: UnorderedMap::new(b"gives-pet".to_vec()), 
         }
     }
 }
@@ -162,12 +175,38 @@ impl NonFungibleTokenBasic {
         }
         // No token with that ID exists, mint and add token to data structures
         self.token_to_account.insert(&token_id, &owner_id);
+		
+		// Generate random Flarn DNA:
+        //use rand::prelude::*;
+        //use rand_chacha::ChaCha8Rng;
+        //use rand_seeder::{Seeder};
+        //let mut rng: ChaCha8Rng = Seeder::from(env::random_seed()).make_rng();
+        
+		let new_pet = Pet {title": "Mascota Charmander", 
+						   description": "Mascota Charmander", 
+						   media": "https://pokemonpedia.fandom.com/es/wiki/Charmander?file=Charmander.jpg",
+						   media_hash" : "BD4U7oq9MX9Sw4V6d4AYJN9xNqVAFA4LCPzRLQ5kcIU="
+						   };
+        
+		
+		self.token_to_pet.insert(&token_id, &new_pet);
+		
+		
     }
 
     /// helper function determining contract ownership
     fn only_owner(&mut self) {
         assert_eq!(env::predecessor_account_id(), self.owner_id, "Only contract owner can call this method.");
     }
+	
+	/// Added method: get the metadata for a token
+    pub fn get_token_meta(&self, token_id: TokenId) -> Pet {
+        match self.token_to_pet.get(&token_id) {
+            Some(pet) => pet,
+            None => env::panic(b"Missing metadata.")
+        }
+    }
+	
 }
 
 // use the attribute below for unit tests
@@ -390,4 +429,20 @@ mod tests {
         let owner = contract.get_token_owner(token_id.clone());
         assert_eq!(joe(), owner, "Token was not transferred after transfer call with escrow.");
     }
+	
+	
+	 #[test]
+    fn token_to_meta() {
+        // Make an instance of the contract, and set up a test context
+        let context = get_context(robert(), 0);
+        testing_env!(context);
+        let mut contract = NonFungibleTokenBasic::new(robert());
+        // Mint a token
+        contract.mint_token(mike(), 19u64);
+        // Get the token's metadata
+        let metadata = contract.get_token_meta(19u64);
+        // check that the DNA contains a value:
+        assert!(metadata.title != "", "Title not set.");
+    }
+	
 }
