@@ -49,6 +49,10 @@ The user login with their NEAR account and selects an available pet (only beginn
 # Mockups
 Please find the proposed frontend here: https://app.moqups.com/TPZmsuj0bIsBkkass8x3TOOFbNYJp5VZ/edit/page/a92d8c5f3
 
+# Economy of points
+1. Maximum points is limited of quantidade of users.
+2. Points are recalculating by each new user.
+3. Points are utilized when redeem them.
 
 # Structures
 
