@@ -7,15 +7,13 @@ Project web 3.0 that impulse the mobility through by play and move to earn, usin
 2. User can obtain points completing challenges (off-chain).
 3. User can transfer you pet digital (NFT).
 4. User can obtain accesories to pet digital using our points.
-
-[out of scope]
-5. User can buy one or more pet digital of the marketplace.
-6. User can obtain points buying them with NEAR token.
-7. User can obtain accesories buying them with NEAR token.
-8. User can evolve your pet digital using our points.
-9. User can send your pet digital to marketplace.
-10. User can obtain points doing sports activities using an wereable as a intermediary.
-11. User can to have a battle with oter pet digital.
+5. User can buy one or more pet digital of the marketplace.**[out of scope]**
+6. User can obtain points buying them with NEAR token.**[out of scope]**
+7. User can obtain accesories buying them with NEAR token.**[out of scope]**
+8. User can evolve your pet digital using our points.**[out of scope]**
+9. User can send your pet digital to marketplace.**[out of scope]**
+10. User can obtain points doing sports activities using an wereable as a intermediary.**[out of scope]**
+11. User can to have a battle with oter pet digital.**[out of scope]**
 
 In the present project only, will be development the features within scope.
 
