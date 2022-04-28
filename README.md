@@ -3,13 +3,19 @@
 Project web 3.0 that impulse the mobility through by play and move to earn, using NEAR protocol. 
 
 **Features :**
-1. User can adquire one or more pet digital (NFT) of type beginner or buy one of the marketplace (the last feature is out of scope).
-2. User can obtain points completing challenges or buying them (the last feature is out of scope).
+1. User can adquire one or more pet digital (NFT) of type beginner.
+2. User can obtain points completing challenges (off-chain).
 3. User can transfer you pet digital (NFT).
-4. User can obtain accesories to pet digital using our points or buying them (the last feature is out of scope).
-5. User can evolve your pet digital using our points or buying them (the two features is out of scope).
-6. User can send your pet digital to marketplace (the feature is out of scope).
-7. User can obtain points doing sports activities using an wereable as a intermediary (the last feature is out of scope).
+4. User can obtain accesories to pet digital using our points.
+
+[out of scope]
+5. User can buy one or more pet digital of the marketplace.
+6. User can obtain points buying them with NEAR token.
+7. User can obtain accesories buying them with NEAR token.
+8. User can evolve your pet digital using our points.
+9. User can send your pet digital to marketplace.
+10. User can obtain points doing sports activities using an wereable as a intermediary.
+11. User can to have a battle with oter pet digital.
 
 In the present project only, will be development the features within scope.
 
@@ -30,20 +36,21 @@ The user login with their NEAR account and selects an available pet (only beginn
 
 **How gain points?**
 1. Completing the challenges presented on the platform.
-2. Buying points using NEAR token (is out of scope).
-3. Doing sports activities using an wereable device as a intermediary (is out of scope).
+2. Buying points using NEAR token (**is out of scope**).
+3. Doing sports activities using an wereable device as a intermediary (**is out of scope**).
 
 **How use the points?**
 1. Buy accessories for your pet.
-2. Evolve your pet (you must to complete a minimum of required points).
+2. Evolve your pet (you must to complete a minimum of required points - **is out of scope**).
 
-**Other Features**
+**Other Uses**
 1. The user can transfer the NFT associated with your pet, whatelse of the level in which he (pet) is.
-2. The user can put their NFT up for sale in a marketplace from the intermediate level. (is out of scope).
+2. The user can put their NFT up for sale in a marketplace from the intermediate level. (**is out of scope**).
 
 
 # Mockups
 Please find the proposed frontend here: https://app.moqups.com/TPZmsuj0bIsBkkass8x3TOOFbNYJp5VZ/edit/page/a92d8c5f3
+
 
 # Structures
 
