@@ -82,9 +82,9 @@ pub struct Pet {
 
 pub struct NonFungibleTokenBasic {
     pub token_to_account: UnorderedMap<TokenId, AccountId>,
-    pub account_gives_access: UnorderedMap<AccountIdHash, UnorderedSet<AccountIdHash>>, // Vec<u8> is sha256 of account, makes it safer and is how fungible token also works
+    pub account_gives_access: UnorderedMap<AccountIdHash, UnorderedSet<AccountIdHash>>,
     pub owner_id: AccountId,
-  	pub token_to_pet: UnorderedMap<TokenId, Pet>,
+    pub token_to_pet: UnorderedMap<TokenId, Pet>,
     pub points_to_abilitie : UnorderedMap<Points,AbilitiesState> 
 }
 
@@ -92,6 +92,34 @@ pub struct NonFungibleTokenBasic {
 ``````
 
 # Methods
+
+``````markdown
+```rust
+pub fn mint_token(&mut self, owner_id: String, token_id: TokenId) 
+```
+`````` 
+method for mint an NFT
+
+``````markdown
+```rust
+pub fn get_token_meta(&self, token_id: TokenId) 
+```
+`````` 
+method to show the metadata of a NFT
+``````markdown
+```rust
+pub fn update_token(&mut self, _owner_id: String, token_id: TokenId, ability : String) 
+```
+`````` 
+method for add an ability to a NFT
+
+
+
+
+
+
+
+
 
 
 
