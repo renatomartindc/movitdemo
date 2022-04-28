@@ -14,8 +14,14 @@ near create-account $NEAR_ACCT --initialBalance 5 --masterAccount $PARENT_ACCT
 
 
 # deploy contract to NEAR_ACCT
-near deploy $NEAR_ACCT --wasmFile res/non_fungible_token.wasm --accountId $NEAR_ACCT
+near deploy $NEAR_ACCT --wasmFile res/movit.wasm --accountId $NEAR_ACCT
 
 
 # Call some method
 # near call $NEAR_ACCT get_solution '{}' --accountId $NEAR_ACCT
+near call --accountId $NEAR_ACCT $NEAR_ACCT  new '{"owner_id": "'$NEAR_ACCT'" }'
+near call --accountId $NEAR_ACCT $NEAR_ACCT  mint_token '{ "token_id":1234, "owner_id": "'$NEAR_ACCT'" }'
+near view --accountId $NEAR_ACCT $NEAR_ACCT  get_token_meta '{"token_id":1234}'
+near call  --accountId $NEAR_ACCT $NEAR_ACCT show_token '{ "token_id":1234, "_owner_id": "'$NEAR_ACCT'" ,"_ability" : "Force"}'
+near call  --accountId $NEAR_ACCT $NEAR_ACCT update_token '{ "token_id":1234, "_owner_id": "'$NEAR_ACCT'" ,"ability" : "Force"}'
+near view --accountId $NEAR_ACCT $NEAR_ACCT  get_token_meta '{"token_id":1234}'
