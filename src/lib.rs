@@ -154,7 +154,7 @@ impl NEP4 for NonFungibleTokenBasic {
         }
 
         if !self.check_access(token_owner_account_id) {
-            env::panic(b"Attempt to transfer a token with no access.")
+            env::panic(b"Aittempt to transfer a token with no access.")
         }
         self.token_to_account.insert(&token_id, &new_owner_id);
     }
@@ -202,7 +202,7 @@ impl NonFungibleTokenBasic {
 						   description: "Mascota Charmander".to_string(), 
 						   media: "https://pokemonpedia.fandom.com/es/wiki/Charmander?file=Charmander.jpg".to_string(),
 						   media_hash : "BD4U7oq9MX9Sw4V6d4AYJN9xNqVAFA4LCPzRLQ5kcIU=".to_string(),
-                           extra : "YYYYYY".to_string()
+                           extra : "".to_string()
 						   };
         
 		
@@ -246,7 +246,7 @@ impl NonFungibleTokenBasic {
 			 
             },
 
-            None => env::panic(b"Missing metadataXXXXXX.")
+            None => env::panic(b"Missing metadata.")
         }
 
         self.token_to_pet.remove(&token_id);
@@ -254,6 +254,22 @@ impl NonFungibleTokenBasic {
 
 
     }
+    pub fn transfer_token (&mut self, _owner_id: String, new_owner_id: String, token_id:TokenId){
+
+
+        self.only_owner();
+
+        let token_check = self.token_to_account.get(&token_id);
+
+        if !token_check.is_some() {
+            env::panic(b"Token ID doesn't exists.")
+        }
+
+        // transfer token to new owner
+        self.token_to_account.insert(&token_id, &new_owner_id);
+
+    }
+
 
 
 
@@ -387,6 +403,26 @@ mod tests {
         //assert!(metadata.extra.len()>0);
 
     }
+
+
+    #[test]
+    fn transfer_token() {
+        // Owner account: robert.testnet
+        // New owner account: joe.testnet
+
+        testing_env!(get_context(robert(), 0));
+        let mut contract = NonFungibleTokenBasic::new(robert());
+        let token_id = 19u64;
+        contract.mint_token(robert(), token_id);
+
+        // Robert transfers the token to Joe
+        contract.transfer_token(robert(), joe(), token_id.clone());
+
+        // Check new owner
+        let owner = contract.get_token_owner(token_id.clone());
+        assert_eq!(joe(), owner);
+    }
+
 
 	
 }
