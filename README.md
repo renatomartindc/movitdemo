@@ -98,7 +98,7 @@ pub struct NonFungibleTokenBasic {
 pub fn mint_token(&mut self, owner_id: String, token_id: TokenId) 
 ```
 `````` 
-method for mint an NFT
+method to mint an NFT
 
 ``````markdown
 ```rust
@@ -111,7 +111,13 @@ method to show the metadata of a NFT
 pub fn update_token(&mut self, _owner_id: String, token_id: TokenId, ability : String) 
 ```
 `````` 
-method for add an ability to a NFT
+method to add an ability to a NFT
+``````markdown
+```rust
+pub fn transfer_token (&mut self, _owner_id: String, new_owner_id: String, token_id:TokenId){
+```
+`````` 
+method to transfer an NFT
 
 
 
