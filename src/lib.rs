@@ -328,51 +328,9 @@ mod tests {
         }
     }
 
-    #[test]
-    fn transfer_from_with_escrow_access() {
-        // Escrow account: robert.testnet
-        // Owner account: mike.testnet
-        // New owner account: joe.testnet
-        let mut context = get_context(mike(), 0);
-        testing_env!(context);
-        let mut contract = NonFungibleTokenBasic::new(mike());
-        let token_id = 19u64;
-        contract.mint_token(mike(), token_id);
-        // Mike grants access to Robert
-        contract.grant_access(robert());
-
-        // Robert transfers the token to Joe
-        context = get_context(robert(), env::storage_usage());
-        testing_env!(context);
-        contract.transfer_from(mike(), joe(), token_id.clone());
-
-        // Check new owner
-        let owner = contract.get_token_owner(token_id.clone());
-        assert_eq!(joe(), owner);
-    }
-
-    #[test]
-    fn transfer_from_with_your_own_token() {
-        // Owner account: robert.testnet
-        // New owner account: joe.testnet
-
-        testing_env!(get_context(robert(), 0));
-        let mut contract = NonFungibleTokenBasic::new(robert());
-        let token_id = 19u64;
-        contract.mint_token(robert(), token_id);
-
-        // Robert transfers the token to Joe
-        contract.transfer_from(robert(), joe(), token_id.clone());
-
-        // Check new owner
-        let owner = contract.get_token_owner(token_id.clone());
-        assert_eq!(joe(), owner);
-    }
-
-
 	
 	 #[test]
-    fn token_to_meta() {
+    fn mint_token() {
         // Make an instance of the contract, and set up a test context
         let context = get_context(robert(), 0);
         testing_env!(context);
@@ -387,7 +345,7 @@ mod tests {
 
 
     #[test]
-    fn assing_abilitie_to_token() {
+    fn update_token() {
         // Make an instance of the contract, and set up a test context
         let context = get_context(robert(), 0);
         testing_env!(context);
